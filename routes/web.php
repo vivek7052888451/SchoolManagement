@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::middleware(['middleware'=>'PreventBackHistory'])->group(function(){
-   Auth::routes(); 
+   Auth::routes(['register'=>false]); 
 });
 
 
@@ -47,6 +47,9 @@ Route::group(['prefix'=>'admin','middleware'=>['isAdmin','auth','PreventBackHist
      //
     Route::get('examlist',[AdminController::class,'examlist'])->name('admin.examlist');
       Route::get('examlist/examlist-add',[AdminController::class,'examlistAdd'])->name('admin.examlist-add');
+
+      //Role
+      Route::get('role',[AdminController::class,'rolelist'])->name('admin.role');
 });
 
 

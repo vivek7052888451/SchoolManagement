@@ -36,6 +36,11 @@ class AdminController extends Controller
     {
         return view('backend.dashboard.admin.user.parent.add_parent');
     }
+
+    public function rolelist()
+    {
+        dd('role');
+    }
     ////////////////
     /////////////////
    

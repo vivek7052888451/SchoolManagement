@@ -137,7 +137,7 @@
          @if (Route::has('password.request'))
           <a href="{{ route('password.request') }}">Forget password?</a>
          @endif
-     or <a href="{{route('register')}}">Sign up</a> </div>
+
 </div>
 </body>
 </html>
